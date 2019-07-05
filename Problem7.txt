@@ -1,0 +1,39 @@
+Creating test environment:
+
+	git branch test
+	git checkout test
+
+	touch C
+	git add .
+	git commit -m "Commit C"
+
+	touch D
+	git add .
+	git commit -m "Commit D"
+
+	touch E
+	git add .
+	git commit -m "Commit E"
+
+	touch F
+	git add .
+	git commit -m "Commit F"
+
+Switching to prod environment:
+
+	git checkout master
+
+	touch G
+	git add .
+	git commit -m "Commit G"
+
+	touch H
+	git add .
+	git commit -m "Commit H"
+
+	touch I
+	git add .
+	git commit -m "Commit I"
+
+Picking a particular commit from test environment:
+	git cherry-pick af68a2e88752da5dfbf208a8fd1de314e06ef72d

@@ -1,0 +1,71 @@
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git add WrongFile1.txt WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git commit -m "Accidental Commit"
+[master 1fca0e1] Accidental Commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 WrongFile1.txt
+ create mode 100644 WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 105.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/YashrajG/GitSample.git
+   97294a8..1fca0e1  master -> master
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git log
+commit 1fca0e135377bc0d134e2c660d2690d77fc23628 (HEAD -> master)
+Author: Yashraj Gangal <yashraj.gangal@gmail.com>
+Date:   Fri Jul 5 04:32:58 2019 +0530
+
+    Accidental Commit
+
+commit 97294a8e32fa0f9fa7844b69d3083163aada9e45
+Author: Yashraj Gangal <yashraj.gangal@gmail.com>
+Date:   Fri Jul 5 04:25:11 2019 +0530
+
+    Removing wrong files from remote repository
+
+commit b117dac178e9558e237625fed45189762555f45d
+Author: Yashraj Gangal <yashraj.gangal@gmail.com>
+Date:   Fri Jul 5 04:23:04 2019 +0530
+
+    Accidentallly adding wrong files
+
+commit 7ae420d75386b3f3e079c87ca18ff831c1140e89
+Author: Yashraj Gangal <yashraj.gangal@gmail.com>
+Date:   Thu Jul 4 12:57:19 2019 +0530
+
+    Changes made to both files.
+
+commit 942b1c0bd0c23b4ed68af8f055d510ab3e202dec (origin/master, origin/HEAD)
+Author: Yashraj Gangal <yashraj.gangal@gmail.com>
+Date:   Thu Jul 4 12:49:24 2019 +0530
+
+    Added 2 sample files
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git revert 1fca0e135377bc0d134e2c660d2690d77fc23628
+[master f964f5d] Revert "Accidental Commit"
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 WrongFile1.txt
+ delete mode 100644 WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 297 bytes | 99.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/YashrajG/GitSample.git
+   1fca0e1..f964f5d  master -> master
+

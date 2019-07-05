@@ -1,0 +1,77 @@
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ touch WrongFile1.txt WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ ls
+sample1.txt  sample2.txt  WrongFile1.txt  WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git add . -v
+add 'WrongFile1.txt'
+add 'WrongFile2.txt'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git commit -m "Accidentallly adding wrong files"
+[master b117dac] Accidentallly adding wrong files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 WrongFile1.txt
+ create mode 100644 WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 330 bytes | 82.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/YashrajG/GitSample.git
+   7ae420d..b117dac  master -> master
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git rm --cached WrongFile1.txt WrongFile2.txt
+rm 'WrongFile1.txt'
+rm 'WrongFile2.txt'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ ls
+sample1.txt  sample2.txt  WrongFile1.txt  WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        deleted:    WrongFile1.txt
+        deleted:    WrongFile2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        WrongFile1.txt
+        WrongFile2.txt
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git commit -m "Removing wrong files from remote repository"
+[master 97294a8] Removing wrong files from remote repository
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 WrongFile1.txt
+ delete mode 100644 WrongFile2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 290 bytes | 96.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/YashrajG/GitSample.git
+   b117dac..97294a8  master -> master
+

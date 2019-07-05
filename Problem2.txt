@@ -1,0 +1,66 @@
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2
+$ git clone https://github.com/YashrajG/GitSample.git
+Cloning into 'GitSample'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2
+$ ls
+GitSample/
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2
+$ cd GitSample
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ ls
+sample1.txt  sample2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ cat >> sample1.txt
+These changes are made from another place.
+sample1 file changed once.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ cat sample1.txt
+This is the first sample file.
+This example is a part of the git assessment.
+These changes are made from another place.
+sample1 file changed once.
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ cat >> sample2.txt
+More changes from second location.
+Git assessment problem 2.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git add . -v
+warning: LF will be replaced by CRLF in sample1.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sample2.txt.
+The file will have its original line endings in your working directory
+add 'sample1.txt'
+add 'sample2.txt'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git commit -m "Changes made to both files."
+[master 7ae420d] Changes made to both files.
+ 2 files changed, 4 insertions(+)
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 488 bytes | 244.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/YashrajG/GitSample.git
+   942b1c0..7ae420d  master -> master
+

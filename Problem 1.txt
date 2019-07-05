@@ -1,0 +1,48 @@
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest
+$ git config --global user.name "Yashraj Gangal"
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest
+$ git config --global user.email "yashraj.gangal@gmail.com"
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest
+$ git init
+Initialized empty Git repository in C:/Users/Yashraj Gangal/Desktop/Training/GitTest/.git/
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest (master)
+$ cat > sample1.txt
+This is the first sample file.
+This example is a part of the git assessment.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest (master)
+$ cat > sample2.txt
+This is the second sample file.
+This example is also a part of the git assessment.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest (master)
+$ git add . -v
+warning: LF will be replaced by CRLF in sample1.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sample2.txt.
+The file will have its original line endings in your working directory
+add 'sample1.txt'
+add 'sample2.txt'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest (master)
+$ git commit -m "Added 2 sample files"
+[master (root-commit) 942b1c0] Added 2 sample files
+ 2 files changed, 4 insertions(+)
+ create mode 100644 sample1.txt
+ create mode 100644 sample2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 404 bytes | 202.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/YashrajG/GitSample.git
+ * [new branch]      master -> master

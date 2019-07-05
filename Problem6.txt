@@ -1,0 +1,155 @@
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git branch dev
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ ls
+sample1.txt  sample2.txt
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ cat >> sample1.txt
+More Lines added on developer environment.
+This was created in the dev branch.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ cat >> sample2.txt
+This file of sample2 is created in the dev environment.
+Development Line.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ git add . -v
+warning: LF will be replaced by CRLF in sample1.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sample2.txt.
+The file will have its original line endings in your working directory
+add 'sample1.txt'
+add 'sample2.txt'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ git commit -m "New Environment Supportable"
+[dev 20a66fc] New Environment Supportable
+ 2 files changed, 4 insertions(+)
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ git push https://github.com/YashrajG/GitSample.git dev
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 502 bytes | 502.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/YashrajG/GitSample/pull/new/dev
+remote:
+To https://github.com/YashrajG/GitSample.git
+ * [new branch]      dev -> dev
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (dev)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Everything up-to-date
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ cat sample1.txt
+This is the first sample file.
+This example is a part of the git assessment.
+These changes are made from another place.
+sample1 file changed once.
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ cat >> sample1.txt
+This change is made in the production branch.
+Line ready for use.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ cat >> sample2.txt
+This change is made in the production environment.
+Line ready for use.
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git add . -v
+warning: LF will be replaced by CRLF in sample1.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in sample2.txt.
+The file will have its original line endings in your working directory
+add 'sample1.txt'
+add 'sample2.txt'
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git commit -m "Production Changes"
+[master c31bdd1] Production Changes
+ 2 files changed, 4 insertions(+)
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push https://github.com/YashrajG/GitSample.git master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 480 bytes | 480.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/YashrajG/GitSample.git
+   f964f5d..c31bdd1  master -> master
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git merge dev
+Auto-merging sample2.txt
+CONFLICT (content): Merge conflict in sample2.txt
+Auto-merging sample1.txt
+CONFLICT (content): Merge conflict in sample1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master|MERGING)
+$ git add .
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master|MERGING)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 6 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   sample1.txt
+        modified:   sample2.txt
+
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master|MERGING)
+$ git commit -m "Merger"
+[master 91f610c] Merger
+
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 505 bytes | 505.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/YashrajG/GitSample.git
+   c31bdd1..91f610c  master -> master
+

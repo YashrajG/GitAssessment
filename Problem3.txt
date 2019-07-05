@@ -1,0 +1,5 @@
+Yashraj Gangal@Quantiphi-925 MINGW64 ~/Desktop/Training/GitTest2/GitSample (master)
+$ git diff --name-only HEAD HEAD~1
+sample1.txt
+sample2.txt
+
